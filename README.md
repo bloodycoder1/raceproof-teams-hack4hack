@@ -1,6 +1,6 @@
 # TeamUp: Race-Proof Team Formation at Scale (PS1)
 
-[![CI](https://github.com/hack4hack/teamup/actions/workflows/ci.yml/badge.svg)](https://github.com/hack4hack/teamup/actions)
+[![CI](https://github.com/bloodycoder1/raceproof-teams-hack4hack/actions/workflows/ci.yml/badge.svg)](https://github.com/bloodycoder1/raceproof-teams-hack4hack/actions)
 ![Tests](https://img.shields.io/badge/tests-95%20passed-brightgreen)
 ![Benchmark](https://img.shields.io/badge/p95%20latency-156ms%20(%3C200ms)-blue)
 ![Scale](https://img.shields.io/badge/seeded-10k%20users%20%7C%202k%20teams-purple)
@@ -17,6 +17,7 @@
 - 📄 **1-Page Design Document:** [DESIGN_DOC.md](file:///d:/Hack4Hack/DESIGN_DOC.md) *(Data model, concurrency prevention, trade-offs, and 1-week roadmap)*
 - 📊 **Load Test Report:** [load-test-report.md](file:///d:/Hack4Hack/load-test-report.md) *(Autocannon benchmark: 100 concurrent users, p95 = 156ms)*
 - 🎬 **5-Minute Video Walkthrough Script:** [WALKTHROUGH_SCRIPT.md](file:///d:/Hack4Hack/WALKTHROUGH_SCRIPT.md) *(Scene-by-scene demonstration guide)*
+- 🚀 **Free-Tier Deployment Guide:** [DEPLOYMENT.md](file:///d:/Hack4Hack/DEPLOYMENT.md) *(1-click Render blueprint and Railway instructions)*
 
 ---
 
