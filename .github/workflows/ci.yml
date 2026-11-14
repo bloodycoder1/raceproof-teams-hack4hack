@@ -1,0 +1,37 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: teamup
+          POSTGRES_PASSWORD: teamup
+          POSTGRES_DB: teamup_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U teamup"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      NODE_ENV: test
+      DATABASE_URL: postgres://teamup:teamup@localhost:5432/teamup_test
+      JWT_SECRET: ci-secret-ci-secret-ci-secret-ci-secret
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run migrate
+      - run: npm test
