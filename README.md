@@ -12,15 +12,6 @@
 
 ---
 
-## Deliverables & Documentation Quick Links
-
-- 📄 **1-Page Design Document:** [DESIGN_DOC.md](file:///d:/Hack4Hack/DESIGN_DOC.md) *(Data model, concurrency prevention, trade-offs, and 1-week roadmap)*
-- 📊 **Load Test Report:** [load-test-report.md](file:///d:/Hack4Hack/load-test-report.md) *(Autocannon benchmark: 100 concurrent users, p95 = 156ms)*
-- 🎬 **5-Minute Video Walkthrough Script:** [WALKTHROUGH_SCRIPT.md](file:///d:/Hack4Hack/WALKTHROUGH_SCRIPT.md) *(Scene-by-scene demonstration guide)*
-- 🚀 **Free-Tier Deployment Guide:** [DEPLOYMENT.md](file:///d:/Hack4Hack/DEPLOYMENT.md) *(1-click Render blueprint and Railway instructions)*
-
----
-
 ## Architecture Overview
 
 ```
@@ -83,9 +74,9 @@ Launch the entire stack (PostgreSQL + Express API + React Frontend) with a singl
 docker compose up --build
 ```
 
-- **Frontend & App:** Open [http://localhost:4000](http://localhost:4000)
-- **API Health:** Open [http://localhost:4000/health](http://localhost:4000/health)
-- **System Metrics:** Open [http://localhost:4000/metrics](http://localhost:4000/metrics)
+- **Frontend & App:** Open [https://teamup-p5bg.onrender.com/]([http://localhost:4000](https://teamup-p5bg.onrender.com/))
+- **API Health:** Open [https://teamup-p5bg.onrender.com/health](https://teamup-p5bg.onrender.com/health)
+- **System Metrics:** Open [https://teamup-p5bg.onrender.com//metrics](https://teamup-p5bg.onrender.com//metrics)
 
 ---
 
@@ -156,7 +147,7 @@ npm run loadtest
    Average Latency:   73.82 ms
    p50 Latency:       58 ms
    p90 Latency:       90 ms
-   p95 Latency:       156 ms  (Target: < 200 ms)  ✅ PASSED
+   p95 Latency:       156 ms  (Target: < 200 ms)   PASSED
    Errors / Non-2xx:  0  (100% Success Rate)
 ```
 
