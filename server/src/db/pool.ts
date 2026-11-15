@@ -4,9 +4,12 @@ import { env } from '../config/env.js';
 // BIGSERIAL ids and COUNT(*) come back from pg as strings by default. Our ids stay far below 2^53, so parse to number.
 pg.types.setTypeParser(20, (v) => parseInt(v, 10));
 
+const isLocal = env.DATABASE_URL.includes('localhost') || env.DATABASE_URL.includes('127.0.0.1');
+
 export const pool = new pg.Pool({
   connectionString: env.DATABASE_URL,
   max: Number(process.env.PG_MAX_POOL || 50),
+  ssl: isLocal ? false : { rejectUnauthorized: false },
 });
 
 /**

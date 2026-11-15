@@ -1,0 +1,23 @@
+{
+  "name": "TeamUp Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000, 4000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Client (React)",
+      "onAutoForward": "openBrowser"
+    },
+    "4000": {
+      "label": "Server (API)",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "npm --prefix server install && npm --prefix client install && (npm run migrate || true)",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
