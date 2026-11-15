@@ -74,9 +74,9 @@ Launch the entire stack (PostgreSQL + Express API + React Frontend) with a singl
 docker compose up --build
 ```
 
-- **Frontend & App:** Open [https://teamup-p5bg.onrender.com/]([http://localhost:4000](https://teamup-p5bg.onrender.com/))
+- **Frontend & App:** Open [https://teamup-p5bg.onrender.com/](https://teamup-p5bg.onrender.com/)
 - **API Health:** Open [https://teamup-p5bg.onrender.com/health](https://teamup-p5bg.onrender.com/health)
-- **System Metrics:** Open [https://teamup-p5bg.onrender.com//metrics](https://teamup-p5bg.onrender.com//metrics)
+- **System Metrics:** Open [https://teamup-p5bg.onrender.com//metrics](https://teamup-p5bg.onrender.com/metrics)
 
 ---
 
